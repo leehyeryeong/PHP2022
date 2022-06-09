@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+}
+.wrap {
+    width: 1000px;
+    height: 800px;
+    border: solid red;
+}
+.header {
+    width: 1000px;
+    height: 100px;
+    border: solid red;
+}
+.nav {
+    float: left;
+    width: 300px;
+    height: 600px;
+    border: solid red;
+}
+.main {
+    width: 1000px;
+    height: 600px;
+    border: solid red;
+}
+.footer {
+    width: 1000px;
+    height: 90px;
+    border: solid red;
+}
