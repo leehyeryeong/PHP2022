@@ -1,13 +1,12 @@
 <?php
-//1부터 10까지 짝수의 합
-$sum = 0;
-
-for($i=1; $i<=10; $i++) {
-    if($i%2==0) {
-        $sum += $i;
-    } //end of if
-} //end of for
-
-echo "1부터 10까지 짝수의 합은 ".$sum."입니다.";
-
+$u_id = $_POST['id'];
+echo "아이디는 ".$u_id."입니다.<br/>";
+$pw = $_POST['pass'];
+echo "비밀번호는 ".$pw."입니다.<br/>";
+$u_name = $_POST['name'];
+echo "이름은 ".$u_name."입니다.<br/>";
+$email = $_POST['e-mail'];
+echo "이메일은 ".$email."입니다.<br/>";
+$tel = $_POST['telname'];
+echo "전화번호는 ".$tel."입니다.<br/>";
 ?>

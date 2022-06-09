@@ -1,32 +1,61 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <style>
-        .test1 {
-            color: red;
-            background-color: gray;
-        }
-        ul li {
-            font-size: 30px;
-        }
-    </style>
 </head>
+<style>
+    table {
+        border: solid 1px black;
+    }
+    td {
+        border: solid 1px black;
+    }
+</style>
 <body>
-    <h1>Server Side Language</h1>
-    <ul>
-        <li class="test1">php</li>
-        <li class="test1">nodejs</li>
-        <li>spring</li>
-        <li>django</li>
-    </ul>
-    <ol>
-        <li>JSP</li>
-        <li>Servlet</li>
-    </ol>
+    <table>
+        <form method="post" action="test3.php">
+            <tr><td>- 아이디</td><td><input type="text" name="id"></td></tr>
+            <tr><td>- 비밀번호</td><td><input type="password" name="pass"></td></tr>
+            <tr><td>- 비밀번호 확인</td><td><input type="password" name="re_pass"></td></tr>
+            <tr><td>- 이름</td><td><input type="text" name="name"></td></tr>
+            <tr><td>- 성별</td><td><input type="radio" name="gender">여성 <input type="radio" name="gender">남성</td></tr>
+            <tr><td>- 취미</td>
+                <td>
+                    <input type="checkbox" name="swim">수영
+                    <input type="checkbox" name="jogging">조깅
+                    <input type="checkbox" name="teniss">테니스
+                    <input type="checkbox" name="gumdo">검도
+                </td>
+            </tr>
+            <tr>
+                <td>- 전화번호</td>
+                <td>
+                    <select name="sel">
+                        <option value="02">02</option>
+                        <option value="031">031</option>
+                        <option value="010">010</option>
+                    </select>
+                    <input type="tel" name="telname">
+                </td>
+            </tr>
+            <tr><td>- 이메일</td>
+                <td><input type="email" name="e-mail">
+                        @
+                        <select name="sel">
+                            <option value="naver.com">naver.com</option>
+                            <option value="gmail.com">gmail.com</option>
+                            <option value="hanmail.com">hanmail.com</option>
+                        </select>
+                </input>
+                </td>
+            </tr>
+            <td>- 자기 소개</td><td><textarea cols="40" rows="5" name="introduce"></textarea></td>
+            <tr><td><button type="submit">확인</button></td></tr>
+        </form>
+        </tr>
+    </table>
 </body>
 </html>
