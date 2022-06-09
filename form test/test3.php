@@ -9,4 +9,8 @@ $email = $_POST['e-mail'];
 echo "이메일은 ".$email."입니다.<br/>";
 $tel = $_POST['telname'];
 echo "전화번호는 ".$tel."입니다.<br/>";
+for($i=0; $i<count($_POST['sports']); $i++) {
+    $a = $_POST['sports'][$i];
+    echo "선택하신 취미는 ".$a."<br/>";
+}
 ?>
