@@ -13,4 +13,6 @@ for($i=0; $i<count($_POST['sports']); $i++) {
     $a = $_POST['sports'][$i];
     echo "선택하신 취미는 ".$a."<br/>";
 }
+$gender = $_POST['gender'];
+echo "성별은 ".$gender."입니다.";
 ?>
