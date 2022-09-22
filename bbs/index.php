@@ -26,31 +26,34 @@
     </style>
     <title>Hello, world!</title>
 </head>
-<h3>BBS(bullentin board system)</h3>
-<table class="table table-hover">
-    <tr><td>번호</td><td>제목</td><td>작성자</td><td>이메일</td><td>내용</td><td>작성일</td></tr>
-<?php
-//목록 가져오기
-//1. DB 접속
-include('./db_conn.php');
+<body>
+    <h3>BBS(bullentin board system)</h3>
+    
+    <table class="table table-hover">
+        <tr><td>번호</td><td>제목</td><td>작성자</td><td>이메일</td><td>내용</td><td>작성일</td></tr>
+    <?php
+    //목록 가져오기
+    //1. DB 접속
+    include('./db_conn.php');
 
-//2. 모든 데이터 가져오는 쿼리 날리기
-$query = "select * from bbs";
-$result = mysqli_query($conn, $query);
-$count = mysqli_num_rows($result);
+    //2. 모든 데이터 가져오는 쿼리 날리기
+    $query = "select * from bbs";
+    $result = mysqli_query($conn, $query);
+    $count = mysqli_num_rows($result);
 
-//$re: 1차원 배열로 들어감
-//데이터 개수 구하기 $count
-for($i=0; $i<$count; $i++){
-    //한줄씩 가져오기
-    $re = mysqli_fetch_row($result);
-    echo "<tr><td>$re[0]</td><td>$re[1]</td><td>$re[2]</td><td>$re[4]</td><td>$re[5]</td><td>$re[6]</td></tr>";
-}
+    //$re: 1차원 배열로 들어감
+    //데이터 개수 구하기 $count
+    for($i=0; $i<$count; $i++){
+        //한줄씩 가져오기
+        $re = mysqli_fetch_row($result);
+        echo "<tr><td>$re[0]</td><td>$re[1]</td><td>$re[2]</td><td>$re[4]</td><td>$re[5]</td><td>$re[6]</td><td><a href='update_from.php?a=$re[0]';>수정</a>&nbsp;<a href='delete_from.php?b=$re[0]';>삭제</a></td></tr>";
+    }
 
-//3. DB 접속 종료
-mysqli_close($conn);
-?>
-</table>
-<div style="margin-left:700px">
-    <a href="write.html" class="btn btn-danger">Write</a>
-</div>
+    //3. DB 접속 종료
+    mysqli_close($conn);
+    ?>
+    </table>
+    <div style="margin-left:700px">
+        <a href="write.html" class="btn btn-danger">Write</a>
+    </div>
+</body>

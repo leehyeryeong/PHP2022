@@ -1,3 +1,7 @@
+<?php
+$idx = $_GET['a'];
+echo "id: ".$idx;
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -29,7 +33,7 @@
             <label for="exampleFormControlTextarea1" class="form-label"></label>
             Content<textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="content"></textarea>
         </div>
-        <button type="submit" class="btn btn-primary">작성 완료</button>
+        <button type="submit" class="btn btn-primary">수정 완료</button>
     </form>
 
     <!-- Optional JavaScript; choose one of the two! -->
