@@ -4,7 +4,7 @@ include('./db_conn.php');
 $query = "select * from bbs where id=$idx";
 $result = mysqli_query($conn,$query);
 $re = mysqli_fetch_row($result);
-echo "$re[0] $re[1] $re[2] $re[3] $re[4] $re[5] $re[6]";
+// echo "$re[0] $re[1] $re[2] $re[3] $re[4] $re[5] $re[6]";
 $r_update = "select * from"
 ?>
 
